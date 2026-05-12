@@ -1,0 +1,19 @@
+# Virtual Environment
+diabetes_venv/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+
+# Model dosyaları (büyük dosyalar)
+models/*.pkl
+
+# Veri dosyaları
+datasets/*.csv
+
+# OS
+.DS_Store
+Thumbs.db
