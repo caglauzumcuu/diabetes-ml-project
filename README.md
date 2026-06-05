@@ -1,6 +1,18 @@
 # 🩺 Diabetes End-to-End Machine Learning Pipeline
-
 A complete machine learning pipeline for diabetes prediction using the PIMA Indians Diabetes Dataset.
+
+---
+
+## 🚀 Interactive Dashboard
+
+An interactive Streamlit dashboard is available for exploring the full pipeline — EDA, model comparisons, feature importance, and a real-time risk predictor.
+
+```bash
+pip install -r requirements.txt
+streamlit run dashboard/diabetes_dashboard.py
+```
+
+> **Live demo:** *(deploy ettikten sonra buraya Streamlit Cloud linkini ekle)*
 
 ---
 
@@ -12,6 +24,10 @@ diabetes-ml-project/
 ├── src/
 │   ├── helpers.py                # Utility functions
 │   └── pipeline.py               # ML pipeline functions
+├── dashboard/
+│   ├── diabetes_dashboard.py     # Streamlit dashboard  ← YENİ
+│   └── .streamlit/
+│       └── config.toml           # Light theme config   ← YENİ
 ├── datasets/
 │   └── diabetes.csv              # Raw dataset (not tracked by git)
 ├── models/
@@ -24,7 +40,6 @@ diabetes-ml-project/
 ---
 
 ## 📊 Dataset
-
 - **Source:** [PIMA Indians Diabetes Dataset — Kaggle](https://www.kaggle.com/datasets/uciml/pima-indians-diabetes-database)
 - **Rows:** 768 patients
 - **Features:** 8 original + 10 engineered = 18 total
@@ -37,7 +52,7 @@ diabetes-ml-project/
 
 ### 1. Clone the repository
 ```bash
-git clone https://github.com/YOUR_USERNAME/diabetes-ml-project.git
+git clone https://github.com/caglauzumcuu/diabetes-ml-project.git
 cd diabetes-ml-project
 ```
 
@@ -68,6 +83,23 @@ cd ..
 jupyter notebook notebooks/diabetes_pipeline.ipynb
 ```
 
+### 7. Launch the dashboard
+```bash
+streamlit run dashboard/diabetes_dashboard.py
+```
+
+---
+
+## 📈 Dashboard Pages
+
+| Page | Content |
+|------|---------|
+| 📊 Overview | KPI cards, pipeline steps, model leaderboard |
+| 🔍 EDA | Target distribution, feature histograms, correlation matrix |
+| 🤖 Model Comparison | ROC-AUC scores, before/after tuning comparison |
+| ⭐ Feature Importance | Random Forest importances, engineered feature impact |
+| 🎯 Predict | Interactive patient risk calculator |
+
 ---
 
 ## 🔬 Pipeline Steps
@@ -79,6 +111,7 @@ jupyter notebook notebooks/diabetes_pipeline.ipynb
 - Boxplot analysis
 
 ### 2. Data Preprocessing & Feature Engineering
+
 | Original | New Feature | Description |
 |----------|-------------|-------------|
 | Glucose | NEW_GLUCOSE_CAT | normal / prediabetes |
@@ -89,6 +122,7 @@ jupyter notebook notebooks/diabetes_pipeline.ipynb
 | Insulin × BMI | NEW_INSULIN_BMI | interaction feature |
 
 ### 3. Base Model Comparison (5-Fold CV)
+
 | Model | ROC-AUC |
 |-------|---------|
 | GBM | 0.9509 |
@@ -98,6 +132,7 @@ jupyter notebook notebooks/diabetes_pipeline.ipynb
 | AdaBoost | 0.9382 |
 
 ### 4. Hyperparameter Optimization
+
 | Model | Before | After | Gain |
 |-------|--------|-------|------|
 | LightGBM | 0.9470 | 0.9551 | +0.0081 |
@@ -127,7 +162,6 @@ Soft voting ensemble of KNN + RF + LightGBM.
 ---
 
 ## 💡 Key Takeaways
-
 - **Glucose** is the strongest predictor of diabetes (correlation: 0.47)
 - **Feature engineering paid off** — NEW_INSULIN_BMI ranked 2nd in feature importance
 - **Tree-based models** dominate this dataset
@@ -136,16 +170,16 @@ Soft voting ensemble of KNN + RF + LightGBM.
 ---
 
 ## 🛠️ Tech Stack
-
 ![Python](https://img.shields.io/badge/Python-3.10+-blue)
 ![scikit-learn](https://img.shields.io/badge/scikit--learn-1.2+-orange)
 ![XGBoost](https://img.shields.io/badge/XGBoost-1.7+-red)
 ![LightGBM](https://img.shields.io/badge/LightGBM-3.3+-green)
+![Streamlit](https://img.shields.io/badge/Streamlit-1.x-ff4b4b)
+![Plotly](https://img.shields.io/badge/Plotly-5.x-3F4F75)
 ![Pandas](https://img.shields.io/badge/Pandas-1.5+-lightblue)
 
 ---
 
 ## 👤 Author
-
 **Çağla Üzümcü**  
 [GitHub](https://github.com/caglauzumcuu)
