@@ -8,4 +8,5 @@ lightgbm>=3.3.0
 joblib>=1.2.0
 jupyter>=1.0.0
 notebook>=6.5.0
-ipykernel>=6.0.0
+ipykernel>=6.0.0streamlit>=1.25.0
+plotly>=5.0.0
