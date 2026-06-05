@@ -14,6 +14,11 @@ streamlit run dashboard/diabetes_dashboard.py
 
 > **Live demo:** *https://diabetes-ml-project-dzbjavchrnwfzr96vidzed.streamlit.app/*
 
+### 📸 Screenshots
+
+| Overview | Model Comparison | Predict |
+|----------|-----------------|---------|
+| ![Overview](assets/overview.png) | ![Model Comparison](assets/model_comparison.png) | ![Predict](assets/predict.png) |
 ---
 
 ## 📁 Project Structure
