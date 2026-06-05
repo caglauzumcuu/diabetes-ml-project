@@ -12,7 +12,7 @@ pip install -r requirements.txt
 streamlit run dashboard/diabetes_dashboard.py
 ```
 
-> **Live demo:** *(deploy ettikten sonra buraya Streamlit Cloud linkini ekle)*
+> **Live demo:** *https://diabetes-ml-project-dzbjavchrnwfzr96vidzed.streamlit.app/*
 
 ---
 
